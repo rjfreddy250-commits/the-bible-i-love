@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: url("back.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  text-align: center;
+  position: relative;
+}
+
+.weird {
+  font-family: "Courier New", monospace;
+  font-size: 5em;
+  font-weight: bold;
+  color: #00ffcc;
+  position: relative;
+  transform: rotate(-5deg);
+  text-shadow: 3px 3px red, -3px -3px blue;
+  animation: glitch 1.2s infinite;
+}
+
+.tagline {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 1.5em;
+  color: yellow;
+  position: absolute;
+  bottom: -60px;
+  right: -50px;
+  transform: rotate(12deg);
+}
+
+/* glitch animation */
+@keyframes glitch {
+  0% { text-shadow: 3px 3px red, -3px -3px blue; }
+  50% { text-shadow: -3px -3px lime, 3px 3px magenta; }
+  100% { text-shadow: 3px 3px red, -3px -3px blue; }
+}
